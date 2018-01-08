@@ -171,7 +171,6 @@ class App:
                     self.output.insert(END,str(self.irr.data.iloc[i,j])+"\t\t") ## Output to be printed in frameOut
                 else:
                     self.output.insert(END,str(round(self.irr.data.iloc[i,j],2)))
-        #self.output.config(state=DISABLED) ## Makes the text non-editable
                     
 class irradiance_data:
 ## Defines an object containing a dataframe with all the calculated data.
