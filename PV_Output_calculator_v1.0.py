@@ -1,15 +1,7 @@
-
-# coding: utf-8
-
-# ## Calculates the output of PV panels given their geographical location and tilt
-
-# In[22]:
-
-
 ## coding: utf-8
 ## Author: Andrew M. Telford
 ## Version: 1.0
-## Date: 02/01/2018
+## Date: 08/01/2018
 
 ## Simple application to calculate the monthly output of PV panels given their 
 ## geographical location (in the US), power rating and area. The user can chose between setups
@@ -110,7 +102,8 @@ class App:
                 self.tilt = 90-float(self.latitude.get()) - 23.45
     
     def check_nrel_data(self):
-        url = 'https://developer.nrel.gov/api/solar/solar_resource/v1.json?api_key='+               str(self.api.get())+'&lat='+str(self.latitude.get())+'&lon='+str(self.longitude.get())
+        url = 'https://developer.nrel.gov/api/solar/solar_resource/v1.json?api_key='+               
+        str(self.api.get())+'&lat='+str(self.latitude.get())+'&lon='+str(self.longitude.get())
         req = requests.get(url)
         self.nrel_data = json.loads(req.content)
         if (self.nrel_data["outputs"]["avg_ghi"]!="no data"): ## Checks that the data is present  
@@ -157,7 +150,8 @@ class App:
             self.output_data()
         else:
             self.output.delete(1.0, END) ## Clears the textbox
-            self.output.insert(END,"No data present in the NREL database.\nPlease try a different set of coordinates in the US.")    
+            self.output.insert(END,"No data present in the NREL database.\n
+                                    Please try a different set of coordinates in the US.")    
 
     def output_data(self):
     ## Outputs the part of the dataframe entries in a textbox in the GUI.
@@ -210,7 +204,8 @@ def calc_elev(df, lat):
 
 def calc_actual_irr(df, tilt):
 ## Calculates actual irradiance on the solar panel from GHI
-    return df["GHI[kWh/m2/day]"]*sin(radians(df["Elevation[deg]"]+float(tilt)))/            sin(radians(df["Elevation[deg]"]))
+    return df["GHI[kWh/m2/day]"]*sin(radians(df["Elevation[deg]"]+float(tilt)))/            
+           sin(radians(df["Elevation[deg]"]))
     
 def calc_PV_output(df, eff, area):
 ## Calculates the power output of the solar panel    
@@ -221,5 +216,3 @@ root = Tk()
 app = App(root)
 root.mainloop()
 root.destroy() # Required in Windows! Otherwise the app cannot be exited.
-
-
