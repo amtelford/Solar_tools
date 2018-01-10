@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[22]:
-
-
 ## coding: utf-8
 ## Author: Andrew M. Telford
 ## Version: 1.0
@@ -13,6 +7,8 @@
 ## geographical location (in the US), power rating and area. The user can chose between setups
 ## optimised for various seasons in the year.
 ## The user requires an API key to access solar data from NREL.
+
+## v1.1 updates: fixed error in sun elevation calculation
 
 from tkinter import *
 import pandas as pd
