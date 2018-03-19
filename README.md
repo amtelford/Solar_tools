@@ -6,7 +6,7 @@ The tool accounte for typical losses in a PV system (see https://solarcalculator
 The tool relies on solar irradiance data from the National Renewable Energy Laboratory (NREL), which are imported automatically through the NREL API (https://developer.nrel.gov/docs/solar/solar-resource-v1/).
 In order to access these data, the user requires an API key to access solar data from NREL, which can be obtained instantly by registering to their developer website (https://developer.nrel.gov/signup/ ).
 
-* Tool 2: PV_forecast_GUI_1_0. This is an application to calculate AC power output at the inverter in a solar PV installation. It is based on highly accurate forecast models found in the package 'pvlib'.
+* Tool 2: PV_forecast_GUI_1_1. This is an application to calculate AC power output at the inverter in a solar PV installation. It is based on highly accurate forecast models found in the package 'pvlib'. At the moment, the tool uses set PV module and inverter.
 Credits and disclaimer: this graphical user interface uses the package 'pvlib' from Sandia National Laboratories, which is distributed under a 3-clause BSD licence. Details can be found ibelow.
 ----------------------------------------------
 Copyright (c) 2013, Sandia National Labs
