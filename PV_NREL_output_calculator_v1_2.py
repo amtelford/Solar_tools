@@ -6,8 +6,8 @@
 
 ## coding: utf-8
 ## Author: Andrew M. Telford
-## Version: 1.0
-## Date: 02/01/2018
+## Version: 1.2
+## Date: 20/03/2018
 
 ## Simple application to calculate the monthly output of PV panels given their 
 ## geographical location (in the US), power rating and area. The user can chose between setups
